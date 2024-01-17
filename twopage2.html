@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Page 2 - Copied Information</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <td id="copiedName"></td>
+      <td id="copiedEmail"></td>
+    </tr>
+  </table>
+
+  <script>
+    // Retrieve data from session storage
+    const name = sessionStorage.getItem('name');
+    const email = sessionStorage.getItem('email');
+
+    // Display data in Page 2
+    document.getElementById('copiedName').innerText = name;
+    document.getElementById('copiedEmail').innerText = email;
+  </script>
+</body>
+</html>
